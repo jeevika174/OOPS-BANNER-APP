@@ -1,6 +1,4 @@
 public class UC7 {
-
-    // Inner class to map character with its ASCII pattern
     static class CharacterPatternMap {
         Character character;
         String[] pattern;
@@ -18,8 +16,6 @@ public class UC7 {
             return pattern;
         }
     }
-
-    // Create mappings for characters
     public static CharacterPatternMap[] createCharacterPatternMaps() {
 
         String[] O = {
@@ -71,9 +67,7 @@ public class UC7 {
 
         return maps;
     }
-
-    // Get pattern for a character
-    public static String[] getCharacterPattern(char ch, CharacterPatternMap[] charMaps) {
+    ChacterPattern(char ch, CharacterPatternMap[] charMaps) {
 
         for (CharacterPatternMap map : charMaps) {
             if (map.getCharacter() == ch) {
@@ -83,8 +77,6 @@ public class UC7 {
 
         return getCharacterPattern(' ', charMaps);
     }
-
-    // Print the banner message
     public static void printMessage(String message, CharacterPatternMap[] charMaps) {
 
         message = message.toUpperCase();
@@ -100,8 +92,6 @@ public class UC7 {
             System.out.println();
         }
     }
-
-    // Main method
     public static void main(String[] args) {
 
         CharacterPatternMap[] charMaps = createCharacterPatternMaps();
